@@ -69,7 +69,7 @@ body {
     margin-right: 60px;
     cursor: pointer;
     transition: transform 0.6s ease;
-    animation: glow 3s infinite ;
+    animation: glow 3s infinite, Rotate 11s infinite; ;
 
 
 }
@@ -154,6 +154,7 @@ margin-left: 50px;
 margin-top: 90px;
 height: 500px;
 margin-left: 40px;
+animation: rotate 3s infinite;
 
 }
 .img-card:hover{
@@ -176,6 +177,7 @@ transform: skew(3deg, 2deg);
         0 0 40px #ffaa00 ;
         border: #ffaa00;
         border-radius: 60px;
+     
 
  }
     .img-card1 img:hover{
@@ -506,6 +508,8 @@ font-size: large;
 
 
 .letter{
+  font-weight:900 ;
+  font-size: xx-large;
   color: #00ffea;
    text-shadow:
       0 0 10px #00fff7,
@@ -516,7 +520,7 @@ font-size: large;
 }
 .project{
   font-weight: 900;
-  margin-top: 200px;
+  margin-top: 80px;
   color: #00ffea;
   text-align: center;
    text-shadow:
@@ -560,4 +564,17 @@ text-shadow:
 .space{
  display: block;
   width: 50px;
+}
+
+@keyframes Rotate{
+  0%{
+    transform: rotate(0deg);
+} 
+50%{
+      transform: rotate(50deg);
+
+}
+100%{
+  transform: rotate(0deg);
+} 
 }
