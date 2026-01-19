@@ -49,19 +49,38 @@
     <span class="close" onclick="toggleQR()">✕</span>
   </div>
 </div>
+      <!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5353577545513577"
+     crossorigin="anonymous"></script>
+
+<!-- Homepage_Top_Responsive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5353577545513577"
+     data-ad-slot="3742628757"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+
 <script>
-function toggleQR(){
-  document.getElementById("qrOverlay").classList.toggle("active");
-}
-
-function survay(){
-  document.getElementById("srvayOverlay").classList.toggle("active");
-}
-
-  if (performance.navigation.type === 1) { // 1 يعني Reload
-   window.location.href = "index.html"; // غيرها باسم ملف الـ Landing Page
- }
+  (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+
+<script>
+  function toggleQR(){
+    document.getElementById("qrOverlay").classList.toggle("active");
+  }
+
+  function survay(){
+    document.getElementById("srvayOverlay").classList.toggle("active");
+  }
+
+  // Detect reload بدون Redirect (آمن مع AdSense)
+  const navEntry = performance.getEntriesByType("navigation")[0];
+  if (navEntry && navEntry.type === "reload") {
+    console.log("Page reloaded safely");
+  }
+</script>
+
 
 <div class="srvay-button">
         <button class="srvay-button1" onclick="survay()"> srvay </button>
@@ -110,3 +129,4 @@ function survay(){
 </body>
 
 </html>
+
