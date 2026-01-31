@@ -6,8 +6,14 @@ body {
     background-color: black;
     border: #ffe600;
 }
-
+.content1{
+    margin-top: 120px;
+    display: grid;
+    justify-items: left;
+    align-items: left;
+}
 .content{
+  
     margin-top: 120px;
     display: grid;
 }
@@ -105,7 +111,7 @@ body {
 .Nam {
   margin-right: 20px;
     font-size: xx-large;
-  color: #00ffea;
+  color: linear-gradient(135deg, #00ffea, #00b3ff);
   font-weight: 1000;
     text-align: right;
     margin-right: 30px;
@@ -408,6 +414,7 @@ height: 400px;
 }
 
 .name-Antwan {
+  text-align: left;
     font-size: xxx-large;
   text-shadow:
     0 0 10px rgb(255, 213, 0),
@@ -422,12 +429,13 @@ height: 400px;
   color: #ffe600;
   font-weight: 1000;
   
-    text-align: right;
+    text-align: left;
     cursor: pointer;
     margin-right: 100px;
-    margin-top: 100px;
+    
 }
 .name-Antwan:hover{
+  margin-left: 50px;
     filter: brightness(1.2);
     transition: transform 0.3s ease;
     transform: scale(1.1);
@@ -518,6 +526,34 @@ font-size: large;
   animation: glow2 3s infinite;
   gap: 3px;
 }
+.line{
+  margin: 10px auto;
+  width: 150px;
+text-shadow:
+      0 0 10px #00fff7,
+      0 0 25px #00c8b6,
+      0 30px 40px rgba(0,0,0,0.8);
+  height: 3px;
+  background-color: #00ffea;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  animation: forward 3s infinite;
+}
+@keyframes forward {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(10px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translatex(-10px);
+    opacity: 1;
+  }
+}
+
 .project{
   font-weight: 900;
   margin-top: 80px;
@@ -537,7 +573,7 @@ text-shadow:
       0 30px 40px rgba(0,0,0,0.8);
   cursor: pointer;
     transition: transform 0.3s ease;
-    transform: translateZ(140px) scale(1.5)
+   
 
 }
 
@@ -577,4 +613,77 @@ text-shadow:
 100%{
   transform: rotate(0deg);
 } 
+}
+
+.project1{
+  margin-left: 10px;
+   width: 50%;
+   margin-top: 40px;
+    background: linear-gradient(180deg, #1a1a1a, #2d2d2d);
+    border-radius: 20px;
+    text-align: center;
+    display: block;
+    backdrop-filter: blur(100px);
+    height: 500px;
+}
+ 
+.project1:hover{
+    backdrop-filter: blur(100px);
+    box-shadow:
+        0 0 30px #fff700,
+        0 0 40px #ffcc00,
+        0 0 50px #ffaa00 ;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+    transform: scale(1.01);
+}
+img-box img{
+  margin-top: 50px;
+
+}
+img-box img :hover{
+     transition: transform 0.3s ease;
+    transform: scale(1.5) ;
+    cursor: pointer;
+}
+
+.project-info{
+
+  color: #ffe600 ;
+  font-size: xx-large;
+  font-weight: bolder;
+  text-shadow:
+    0 0 10px yellow,
+    0 0 25px orange,
+    0 30px 40px rgba(0,0,0,0.8);
+}
+
+.project-info:hover{
+    filter: brightness(1.2);
+    transition: transform 0.3s ease;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+  
+project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.project-tags .tag {
+  padding: 6px 14px;
+  font-size: 14px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #fff700, #ffd000);
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: 0.3s ease;
+}
+
+.project-tags .tag:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(255, 247, 0, 0.5);
 }
